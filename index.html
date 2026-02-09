@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Accelerator | Innovation Lab</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --text: #334155;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        h1 { margin: 0; font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+        .subtitle { font-size: 1.25rem; opacity: 0.9; margin-top: 1rem; }
+
+        nav {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Cards & Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-top: 0; }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Timeline/Phase Styles */
+        .phase {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+        
+        .phase-number {
+            background: var(--secondary);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .phase-content h3 { margin-top: 0; color: var(--secondary); }
+
+        /* Safety Box */
+        .safety-box {
+            background: #fff5f5;
+            border-left: 5px solid #e53e3e;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .safety-title { color: #c53030; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+
+        /* Tech Stack Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: var(--secondary); color: white; }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .tag-green { background: #d1fae5; color: #065f46; }
+        .tag-blue { background: #dbeafe; color: #1e40af; }
+
+        /* Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .cta-button:hover { background: #1d4ed8; }
+
+        footer {
+            background: var(--secondary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>The Student AI Accelerator</h1>
+        <div class="subtitle">From Consumers to Architects: A 10-Week Innovation Incubator</div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#roadmap">The 10-Week Roadmap</a></li>
+        <li><a href="#tech-stack">The Tech Stack</a></li>
+        <li><a href="#projects">Project Ideas</a></li>
+        <li><a href="#safety">Safety Protocols</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <!-- MISSION SECTION -->
+    <section id="mission">
+        <h2 class="section-title">The Vision</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
+            Most schools treat AI as a tool to do homework. We treat it as a tool to <strong>build the future</strong>. 
+            This incubator invites students to identify real friction points in our school community and solve them using cutting-edge, no-code AI tools.
+        </p>
+        <div class="grid">
+            <div class="card">
+                <span class="feature-icon">🚀</span>
+                <h3>Entrepreneurship</h3>
+                <p>Students operate like a startup: Pitching ideas, iterating on feedback, and shipping real products.</p>
+            </div>
+            <div class="card">
+                <span class="feature-icon">🛠️</span>
+                <h3>Agency</h3>
+                <p>We don't teach "about" AI. Students get their hands dirty building bots, apps, and automations.</p>
+            </div>
+            <div class="card">
+                <span class="feature-icon">🤝</span>
+                <h3>Community Impact</h3>
+                <p>Every project must solve a real problem for a teacher, a parent, or a fellow student.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section id="roadmap">
+        <h2 class="section-title">The Incubator Roadmap</h2>
+        
+        <div class="phase">
+            <div class="phase-number">1</div>
+            <div class="phase-content">
+                <h3>Weeks 1-3: The Friction Hunt (Design Thinking)</h3>
+                <p><strong>Goal:</strong> Identify a problem worth solving.</p>
+                <ul>
+                    <li><strong>Activity:</strong> "User Interviews" with School Ops staff (Cafeteria, Reception, Nurse, Bus Drivers).</li>
+                    <li><strong>Output:</strong> A "Problem Board" identifying time-wasting tasks.</li>
+                    <li><strong>Key Question:</strong> "What is the most boring thing you do every day?"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-number">2</div>
+            <div class="phase-content">
+                <h3>Weeks 4-8: The No-Code Build (Prototyping)</h3>
+                <p><strong>Goal:</strong> Build a "Minimum Viable Product" (MVP).</p>
+                <ul>
+                    <li><strong>Curriculum:</strong> Crash course in Prompt Engineering and RAG (Retrieval Augmented Generation).</li>
+                    <li><strong>Workshops:</strong> "Building your first Brain with Chipp.AI" and "Making it Mobile with Glide."</li>
+                    <li><strong>Milestone:</strong> A working app on a student's phone by Week 6.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-number">3</div>
+            <div class="phase-content">
+                <h3>Weeks 9-10: Demo Day (Launch)</h3>
+                <p><strong>Goal:</strong> Sell the solution to the stakeholders.</p>
+                <ul>
+                    <li><strong>Event:</strong> A Shark Tank-style presentation to School Leadership.</li>
+                    <li><strong>Deliverable:</strong> Not just code, but a "User Manual" and a "Value Pitch" (e.g., Time Saved).</li>
+                    <li><strong>Prize:</strong> Official adoption of the tool by the school.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="tech-stack">
+        <h2 class="section-title">The "No-Code" Tech Stack</h2>
+        <p>We use tools that prioritize <strong>speed</strong> and <strong>safety</strong> over complex coding. No Python required.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Use Case</th>
+                    <th>Why we use it</th>
+                    <th>Difficulty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Chipp.AI</strong></td>
+                    <td>Custom Chatbots</td>
+                    <td>Allows uploading custom knowledge (PDFs) easily.</td>
+                    <td><span class="tag tag-green">Beginner</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Glide Apps</strong></td>
+                    <td>Mobile Apps</td>
+                    <td>Turns Google Sheets into real apps in minutes.</td>
+                    <td><span class="tag tag-green">Beginner</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Zapier</strong></td>
+                    <td>Automation</td>
+                    <td>Connects the App to Email (e.g., "Send alert when form filled").</td>
+                    <td><span class="tag tag-blue">Intermediate</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Gamma</strong></td>
+                    <td>Presentations</td>
+                    <td>AI-generated slide decks for the final pitch.</td>
+                    <td><span class="tag tag-green">Beginner</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2 class="section-title">Starter Project Prompts</h2>
+        <div class="grid">
+            <div class="card" style="border-left: 5px solid var(--primary);">
+                <h3>🗺️ The "New Kid" Navigator</h3>
+                <p><strong>The Problem:</strong> New students get lost and don't know the dress code rules.</p>
+                <p><strong>The Solution:</strong> A Chipp.AI bot trained on the School Handbook and Map. Students can ask "Where is Room 302?" or "Can I wear blue socks?"</p>
+                <p><strong>Data Used:</strong> Public Handbook (PDF).</p>
+            </div>
+            <div class="card" style="border-left: 5px solid var(--accent);">
+                <h3>🚌 Sports Logistics Manager</h3>
+                <p><strong>The Problem:</strong> Coaches spend hours emailing parents about away games.</p>
+                <p><strong>The Solution:</strong> A Glide App where players tap "I need a ride." The AI groups them by location and texts the parents automatically.</p>
+                <p><strong>Data Used:</strong> Schedule & Zip Codes.</p>
+            </div>
+            <div class="card" style="border-left: 5px solid #10b981;">
+                <h3>🎭 The Drama "Line Buddy"</h3>
+                <p><strong>The Problem:</strong> Students need to practice lines but have no partner.</p>
+                <p><strong>The Solution:</strong> An AI bot trained on the specific script (e.g., Hamlet). It reads the other characters' lines so the student can practice on the bus.</p>
+                <p><strong>Data Used:</strong> Public Domain Scripts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY SECTION -->
+    <section id="safety">
+        <h2 class="section-title">Safety & Ethics Protocol</h2>
+        
+        <div class="safety-box">
+            <div class="safety-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                The "Public Data Only" Rule
+            </div>
+            <p><strong>Strict Adherence Required:</strong> To protect student privacy, this incubator operates under a "Zero Trust" model regarding Personally Identifiable Information (PII).</p>
+            <p>Students are <strong>strictly forbidden</strong> from uploading:</p>
+            <ul>
+                <li>Student Rosters with full names.</li>
+                <li>Grades or Transcripts.</li>
+                <li>Medical or Behavioral records.</li>
+                <li>Parent email lists (unless dummy data is used).</li>
+            </ul>
+            <p><em>Violation of this rule results in immediate removal from the program.</em></p>
+        </div>
+
+        <br>
+        <h3>The Student Pledge</h3>
+        <p>Before writing a single prompt, every student signs this agreement:</p>
+        <blockquote style="background: #f1f5f9; padding: 1.5rem; border-left: 4px solid var(--secondary); font-style: italic;">
+            "I promise to use AI to build, not to deceive. I will never upload private data about my classmates or teachers. I will always disclose that my tool is AI-powered. I am an architect of the future, and I build with integrity."
+        </blockquote>
+    </section>
+
+</div>
+
+<footer>
+    <p>Prepared for the Office of Innovation | [School Name]</p>
+    <p><em>Ready to launch? Contact the Head of AI & Innovation for access keys.</em></p>
+</footer>
+
+</body>
+</html>
