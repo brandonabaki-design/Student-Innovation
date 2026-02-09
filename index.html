@@ -192,6 +192,18 @@
         }
         .cta-button:hover { background: #1d4ed8; }
 
+        /* Alignment Box Styles */
+        .alignment-block {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .alignment-block h3 { color: #166534; margin-top: 0; border-bottom: 1px solid #bbf7d0; padding-bottom: 0.5rem; }
+        .alignment-block ul { margin: 0; padding-left: 1.2rem; }
+        .alignment-block li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+
         footer {
             background: var(--secondary);
             color: #94a3b8;
@@ -213,6 +225,7 @@
 <nav>
     <ul>
         <li><a href="#mission">Mission</a></li>
+        <li><a href="#alignment">Standards & UAE Vision</a></li>
         <li><a href="#roadmap">The 10-Week Roadmap</a></li>
         <li><a href="#tech-stack">The Tech Stack</a></li>
         <li><a href="#projects">Project Ideas</a></li>
@@ -227,13 +240,13 @@
         <h2 class="section-title">The Vision</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
             Most schools treat AI as a tool to do homework. We treat it as a tool to <strong>build the future</strong>. 
-            This incubator invites students to identify real friction points in our school community and solve them using cutting-edge, no-code AI tools.
+            This incubator invites students to identify real friction points in our school community and <strong style="color: var(--primary);">engineer and deploy actual working solutions</strong>.
         </p>
         <div class="grid">
             <div class="card">
                 <span class="feature-icon">🚀</span>
-                <h3>Entrepreneurship</h3>
-                <p>Students operate like a startup: Pitching ideas, iterating on feedback, and shipping real products.</p>
+                <h3>Real Solutions</h3>
+                <p>Students do not just write papers about problems. They build functioning apps and bots that the school administration actually installs and uses.</p>
             </div>
             <div class="card">
                 <span class="feature-icon">🛠️</span>
@@ -244,6 +257,45 @@
                 <span class="feature-icon">🤝</span>
                 <h3>Community Impact</h3>
                 <p>Every project must solve a real problem for a teacher, a parent, or a fellow student.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALIGNMENT SECTION -->
+    <section id="alignment">
+        <h2 class="section-title">Curriculum & Strategic Alignment</h2>
+        <p style="margin-bottom: 2rem;">This incubator is designed not just as an extracurricular club, but as a rigorous application of modern standards and national vision.</p>
+
+        <div class="grid">
+            <!-- US / ISTE Standards -->
+            <div class="alignment-block">
+                <h3>🇺🇸 US Curriculum & ISTE Standards</h3>
+                <p><strong>ISTE Standards for Students:</strong></p>
+                <ul>
+                    <li><strong>1.4 Innovative Designer:</strong> Students use a variety of technologies within a design process to identify and solve problems by creating new, useful or imaginative solutions.</li>
+                    <li><strong>1.5 Computational Thinker:</strong> Students develop and employ strategies for understanding and solving problems in ways that leverage the power of technological methods to develop and test solutions.</li>
+                </ul>
+                <p><strong>Common Core (CCSS) & NGSS:</strong></p>
+                <ul>
+                    <li><strong>ELA-LITERACY.W.9-10.6:</strong> Use technology, including the Internet, to produce, publish, and update individual or shared writing products.</li>
+                    <li><strong>NGSS HS-ETS1-1:</strong> Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions.</li>
+                </ul>
+            </div>
+
+            <!-- UAE Vision -->
+            <div class="alignment-block" style="background: #fffbeb; border-color: #fcd34d;">
+                <h3 style="color: #92400e; border-color: #fcd34d;">🇦🇪 UAE Innovation Framework</h3>
+                <p><strong>Aligns with UAE National Innovation Strategy:</strong></p>
+                <ul>
+                    <li><strong>Sector: Education:</strong> Promotes innovation in the delivery of education and equips students with 21st-century skills (AI & Automation).</li>
+                    <li><strong>UAE Centenary 2071:</strong> Directly supports the pillar of "The Best Education in the World" by fostering entrepreneurship and technical excellence.</li>
+                </ul>
+                <p><strong>School Inspection Framework (Innovation Parameter):</strong></p>
+                <ul>
+                    <li><strong>Innovation Culture:</strong> Creates an environment where innovation is embedded in the school’s daily life, not just in theory.</li>
+                    <li><strong>Critical Thinking & Problem Solving:</strong> Provides evidence of students applying skills to solve real-world community problems (School Operations).</li>
+                    <li><strong>Student Leadership:</strong> Students lead the identification of problems and the design of solutions.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -273,7 +325,7 @@
                 <ul>
                     <li><strong>Curriculum:</strong> Crash course in Prompt Engineering and RAG (Retrieval Augmented Generation).</li>
                     <li><strong>Workshops:</strong> "Building your first Brain with Chipp.AI" and "Making it Mobile with Glide."</li>
-                    <li><strong>Milestone:</strong> A working app on a student's phone by Week 6.</li>
+                    <li><strong>Milestone:</strong> A working app on a student's phone by Week 6 that solves the identified problem.</li>
                 </ul>
             </div>
         </div>
@@ -393,8 +445,8 @@
 </div>
 
 <footer>
-    <p>Prepared for the Office of Innovation | [School Name]</p>
-    <p><em>Ready to launch? Contact the Head of AI & Innovation for access keys.</em></p>
+    <p>Prepared for student innovation | [School Name]</p>
+    <p><em>Ready to launch? Contact the Head of Teaching and Learning.</em></p>
 </footer>
 
 </body>
